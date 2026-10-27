@@ -27,6 +27,8 @@ tests/               Testes de comportamento
 
 As 10 imagens iniciais para avaliação de estilo serão criadas posteriormente; esta base não contém artes geradas nesta etapa.
 
+Produtos mostrados em artes devem existir no catálogo oficial de [`config/catalogo-produtos.json`](config/catalogo-produtos.json). A página individual do produto no site é a referência visual obrigatória; não são permitidos produtos imaginários, genéricos ou de fontes externas.
+
 ## Configuração local
 
 ```bash

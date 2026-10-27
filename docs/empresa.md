@@ -10,9 +10,11 @@ O site e o perfil do Instagram são fontes editoriais para criação livre quand
 
 ## Escopo observado no site
 
-O site apresenta uma operação de comércio e serviço de equipamentos para saúde, com categorias como equipamentos, acessórios, insumos, inaladores, ortopedia, analíticos, seminovos, locação e assistência técnica. Entre os produtos e temas visíveis estão espirômetros, ventilômetros, monitores, oxímetros, desfibriladores, eletrocardiógrafos, dinamômetros e itens de fisioterapia respiratória.
+O site apresenta uma operação de comércio e serviço de equipamentos para saúde, com categorias como equipamentos, acessórios, insumos, inaladores, ortopedia, analíticos, seminovos, locação e assistência técnica. Entre os produtos e temas visíveis estão espirômetros, monoxímetros, manovacuômetros, oxímetros, eletrocardiógrafos, dinamômetros, acessórios de espirometria e itens de fisioterapia respiratória.
 
 Essas categorias são referências editoriais verificadas no site em 26/10/2026; a disponibilidade, preço e condição de cada item devem ser confirmados antes de uma publicação específica.
+
+O catálogo operacional está em [`config/catalogo-produtos.json`](../config/catalogo-produtos.json). Ele mantém a página de sitemap oficial como fonte de descoberta e registra produtos destacados com seus slugs exatos. A página individual do site é obrigatória como referência visual antes de qualquer arte mostrar um produto.
 
 ## Rotina de conteúdo
 

@@ -1,0 +1,38 @@
+{
+  "sourceOfTruth": {
+    "website": "https://www.aquinosite.com.br/",
+    "sitemap": "https://www.aquinosite.com.br/sitemap.xml",
+    "productSitemap": "https://www.aquinosite.com.br/loja/arquivos/1447785/sitemaps/sitemap_1.xml",
+    "lastChecked": "2026-10-26",
+    "rule": "Use only a product page from the official website as the visual source for product artwork."
+  },
+  "homepageProductsChecked": [
+    { "name": "Espirômetro Pneumotrac Vitalograph", "path": "/espirometro-pneumotrac-vitalograph" },
+    { "name": "Espirômetro Oscilômetro Tremoflo C 100", "path": "/espirometro-oscilometro-tremoflo-c-100-technical-specifications" },
+    { "name": "Espirômetro Compact Alpha Vitalograph e ECG 12 Lead", "path": "/espirometro-vitalograph-compact-amp-ecg-12-lead-bt-12-resting-parte-nro-6600-e-41300" },
+    { "name": "In-Check Dial G16 Clement Clarke", "path": "/in-check-dial-g16-clement-clarke" },
+    { "name": "Espirômetro Micro Vitalograph", "path": "/espirometro-micro-vitalograph" },
+    { "name": "Termômetro Digital Clínico Axilar LCD TH1027 G-Tech", "path": "/termometro-digital-clinico-axilar-lcd-th1027-g-tech" },
+    { "name": "Aparelho de Pressão Digital de Pulso P.A. MED", "path": "/aparelho-de-pressao-digital-de-pulso-p-a-med" },
+    { "name": "Espirômetro Alpha Device Studio Touch Screen Vitalograph", "path": "/espirometro-alpha-device-studio-tecnologia-em-touch-screen-vitalograph" },
+    { "name": "Espirômetro In2itive e Software Studio Vitalograph", "path": "/espirometro-in2itive-software-studio-vitalograph" },
+    { "name": "Seringa de Calibração de 3 Litros AquiNoSite", "path": "/seringa-de-calibracao-de-3-litros-aquinosite" },
+    { "name": "Eletroencefalógrafo EEG 16 Canais", "path": "/eletroencefalografo-eeg-16-canais" },
+    { "name": "Eletroencefalógrafo EEG 24 Canais", "path": "/eletroencefalografo-eeg-24-canais" },
+    { "name": "Espirômetro Vitalograph Pneumotrac com RMS", "path": "/espirometro-vitalograph-pneumotrac-com-rms-parte-nro-77700" },
+    { "name": "Dinamômetro Analógico Hidráulico de Mão SH5001", "path": "/dinamometro-analogico-hidraulico-de-mao-sh5001" },
+    { "name": "Dinamômetro Digital de Mão DHD-1 SH1001", "path": "/dinamometro-digital-de-mao-dhd-1-sh1001" }
+  ],
+  "categories": [
+    "equipamentos",
+    "acessorios",
+    "insumos",
+    "inaladores",
+    "ortopedia",
+    "analiticos",
+    "seminovos",
+    "assistencia tecnica",
+    "locacao",
+    "veterinaria"
+  ]
+}
