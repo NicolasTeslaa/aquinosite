@@ -1,0 +1,30 @@
+{
+  "client": {
+    "name": "AquiNoSite",
+    "instagramHandle": "@aquinosite.saude",
+    "website": "https://www.aquinosite.com.br/"
+  },
+  "schedule": {
+    "timezone": "America/Sao_Paulo",
+    "weekdays": ["monday", "tuesday", "wednesday", "thursday", "friday"],
+    "story": {
+      "time": "09:00",
+      "format": "9:16"
+    },
+    "feed": {
+      "time": "15:00",
+      "format": "1:1",
+      "automaticCaption": true,
+      "approvalRequired": false
+    }
+  },
+  "editorial": {
+    "weeklyTopicDay": "monday",
+    "missingWeeklyTopic": "free_creation_from_references",
+    "contentRestrictions": [],
+    "referenceUrls": [
+      "https://www.aquinosite.com.br/",
+      "https://www.instagram.com/aquinosite.saude/"
+    ]
+  }
+}
