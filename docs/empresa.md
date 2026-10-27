@@ -31,6 +31,28 @@ Os horários podem ser ajustados depois com base nos momentos de maior visualiza
 
 Na ausência de assunto enviado pelo cliente, a equipe pode criar livremente a partir do site, do Instagram e da pasta `assets/referencias/`. A liberdade é editorial, mas não autoriza afirmações factuais sem fonte nem conteúdo de saúde que extrapole as informações verificadas.
 
+## Estratégia editorial aprovada
+
+O conteúdo não deve se limitar a fotos de produtos. A comunicação deve mostrar produtos reais dentro de situações de uso, educação e relacionamento profissional:
+
+| Pilar | Participação orientativa | Exemplos |
+| --- | ---: | --- |
+| Educação | 30% | Dúvidas, diferenças entre modelos, manutenção e aplicações |
+| Contexto profissional | 25% | Equipamentos em clínicas, consultórios, fisioterapia e assistência |
+| Confiança | 20% | Bastidores, equipe, testes, preparação, envio e suporte |
+| Produtos contextualizados | 15% | Produto real em ambiente de uso, nunca como imagem genérica |
+| Institucional | 10% | História, categorias, parcerias e diferenciais |
+
+Para cada produto divulgado, priorizar também uma peça que explique uma dúvida, um problema ou uma situação de uso relacionada a ele. A comunicação deve vender conhecimento e confiança, não somente o item do catálogo.
+
+### Direção visual de conteúdo
+
+- Produto real em ambiente de uso.
+- Pessoas e profissionais em situações plausíveis, sem inventar clientes, resultados ou depoimentos.
+- Cards educativos e institucionais, mesmo quando não houver produto na imagem.
+- Azul, ciano, cards arredondados e títulos fortes como linguagem visual recorrente.
+- Qualquer afirmação técnica ou regulatória deve ser conferida na página oficial do produto ou em fonte fornecida pelo cliente.
+
 ## Fase inicial
 
 O cliente aprovou a criação posterior de 10 imagens de referência para avaliar estilos. Nenhuma dessas imagens faz parte desta preparação inicial.

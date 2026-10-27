@@ -36,6 +36,10 @@ description: Convenções para identidade, criação de imagens e publicação d
 
 Toda publicação de Feed deve receber legenda automática em português brasileiro. A legenda deve explicar o tema da arte com clareza, evitar promessas não verificadas e terminar com uma chamada para ação coerente com as fontes do cliente. Stories podem usar o texto da própria arte quando isso for suficiente.
 
+## Mix editorial
+
+O perfil não é apenas um catálogo. Distribua as pautas aproximadamente entre educação (30%), contexto profissional (25%), confiança e bastidores (20%), produtos contextualizados (15%) e institucional (10%). Para cada produto divulgado, priorize também uma peça que responda a uma dúvida ou situação de uso relacionada a ele.
+
 ## Programação
 
 A rotina não depende de aprovação individual: um Story é programado às 09:00 e um Feed às 15:00, de segunda a sexta-feira. Quando não houver pauta enviada na segunda-feira, use criação livre baseada nas referências aprovadas.
