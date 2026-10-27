@@ -20,8 +20,16 @@
     { "name": "Eletroencefalógrafo EEG 16 Canais", "path": "/eletroencefalografo-eeg-16-canais" },
     { "name": "Eletroencefalógrafo EEG 24 Canais", "path": "/eletroencefalografo-eeg-24-canais" },
     { "name": "Espirômetro Vitalograph Pneumotrac com RMS", "path": "/espirometro-vitalograph-pneumotrac-com-rms-parte-nro-77700" },
-    { "name": "Dinamômetro Analógico Hidráulico de Mão SH5001", "path": "/dinamometro-analogico-hidraulico-de-mao-sh5001" },
-    { "name": "Dinamômetro Digital de Mão DHD-1 SH1001", "path": "/dinamometro-digital-de-mao-dhd-1-sh1001" }
+    {
+      "name": "Dinamômetro Analógico Hidráulico de Mão SH5001",
+      "path": "/dinamometro-analogico-hidraulico-de-mao-sh5001",
+      "referenceAsset": "assets/referencias/produtos/dinamometro-analogico-sh5001-oficial.jpeg"
+    },
+    {
+      "name": "Dinamômetro Digital de Mão DHD-1 SH1001",
+      "path": "/dinamometro-digital-de-mao-dhd-1-sh1001",
+      "referenceAsset": "assets/referencias/produtos/dinamometro-digital-dhd-1-sh1001-oficial.jpg"
+    }
   ],
   "categories": [
     "equipamentos",
