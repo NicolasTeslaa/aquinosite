@@ -27,6 +27,12 @@ O cliente pode enviar os assuntos das publicações semanalmente, às segundas-f
 
 Os horários podem ser ajustados depois com base nos momentos de maior visualização.
 
+## Critério de aceite obrigatório — logo
+
+A logo correta é requisito de todas as imagens geradas, com ou sem produto. Toda arte que apresentar a marca deve usar um dos arquivos oficiais fornecidos pelo cliente em [`assets/logo/`](../assets/logo/). Não são aceitas logos redesenhadas, estilizadas, aproximadas, espelhadas, com tipografia diferente, com símbolo alterado ou criadas pelo gerador de imagens.
+
+O fluxo obrigatório é gerar a composição sem pedir que a inteligência artificial desenhe a marca, reservar uma área segura e aplicar a logo oficial como sobreposição na etapa final. Antes de salvar ou publicar, conferir símbolo, proporções, grafia `AquiNoSite`, acentuação de `Saúde`, cores e espaçamentos contra o arquivo-fonte. Qualquer divergência reprova a arte e exige correção.
+
 ## Criação sem pauta
 
 Na ausência de assunto enviado pelo cliente, a equipe pode criar livremente a partir do site, do Instagram e da pasta `assets/referencias/`. A liberdade é editorial, mas não autoriza afirmações factuais sem fonte nem conteúdo de saúde que extrapole as informações verificadas.

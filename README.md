@@ -29,6 +29,10 @@ As 10 imagens iniciais para avaliação de estilo serão criadas posteriormente;
 
 Produtos mostrados em artes devem existir no catálogo oficial de [`config/catalogo-produtos.json`](config/catalogo-produtos.json). A página individual do produto no site é a referência visual obrigatória; não são permitidos produtos imaginários, genéricos ou de fontes externas.
 
+### Logo — critério de aceite obrigatório
+
+Toda imagem com a marca deve usar a logo oficial de `assets/logo/`. Nunca aceitar uma logo redesenhada ou gerada por IA. A composição deve ser gerada com espaço reservado e a logo oficial deve ser aplicada na etapa final; depois, conferir símbolo, proporções, grafia, acentuação, cores e espaçamentos antes de salvar ou publicar.
+
 ## Configuração local
 
 ```bash

@@ -10,6 +10,8 @@ description: Convenções para identidade, criação de imagens e publicação d
 - Leia `docs/empresa.md` antes de tomar decisões de conteúdo.
 - Use `assets/referencias/` como referência visual, nunca como conteúdo a copiar.
 - Use somente logos fornecidos pelo cliente em `assets/logo/`.
+- A logo é um critério de aceite obrigatório: toda arte que exibir a marca deve usar a logo oficial fornecida pelo cliente, sem redesenho, recriação, estilização, substituição ou variação gerada por IA.
+- Não peça ao gerador de imagens para desenhar a logo. Gere a composição com uma área reservada e aplique a logo oficial posteriormente, usando o arquivo de `assets/logo/` como sobreposição.
 - O site e o Instagram registrados em `config/instagram.json` são fontes editoriais.
 - Não crie alegações médicas, resultados, preços, prazos, certificações ou serviços que não estejam confirmados nas fontes do cliente.
 
@@ -31,6 +33,8 @@ description: Convenções para identidade, criação de imagens e publicação d
 - Story: 9:16, preferencialmente 1080×1920, com texto e logo na área central segura.
 - Crie uma composição própria; referências servem para linguagem visual, layout e ritmo, enquanto a página oficial fornece o produto exato.
 - Inspecione a imagem final antes de disponibilizá-la para publicação.
+- Critério de aceite da logo: compare a logo final com o arquivo oficial do cliente e confirme símbolo, proporções, grafia "AquiNoSite", acentuação de "Saúde", cores e espaçamentos. Qualquer diferença reprova a arte e exige correção antes de salvar ou publicar.
+- Se o gerador inserir uma logo parecida, texto ilegível ou símbolo diferente, remova essa versão e substitua pela logo oficial; nunca trate uma aproximação como aceitável.
 
 ## Legendas
 

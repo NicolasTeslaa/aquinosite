@@ -9,6 +9,9 @@
 ## Regras já confirmadas
 
 - Usar a logo oficial fornecida pelo cliente, sem redesenhar o símbolo.
+- Critério de aceite obrigatório para toda imagem: a logo precisa ser a reprodução exata de um arquivo oficial em `assets/logo/`. Logos recriadas, estilizadas, aproximadas ou geradas por IA são inválidas.
+- A geração deve reservar espaço para a marca; a aplicação final deve ser feita com o arquivo oficial sobreposto, preservando símbolo, proporções, grafia, acentuação, cores e espaçamentos.
+- Antes da aprovação, comparar visualmente a logo aplicada com o arquivo-fonte. Se houver qualquer divergência, a arte está reprovada.
 - Manter Feed em 1:1 e Story em 9:16.
 - Tratar as referências como direção visual e não como conteúdo reutilizável.
 - Avaliar textos e logo dentro da área segura do Story antes da publicação.
