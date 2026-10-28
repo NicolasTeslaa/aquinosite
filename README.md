@@ -16,12 +16,15 @@ As regras versionadas ficam em [`config/instagram.json`](config/instagram.json).
 ## Estrutura
 
 ```text
+.agents/skills/      Regras operacionais do projeto
 assets/logo/         Logos fornecidos pelo cliente
 assets/referencias/  Identidade visual e referências aprovadas
 assets/marketing/    Artes finais de Feed e Story
-config/              Configurações não secretas de publicação
-docs/                Perfil institucional e decisões do projeto
-src/                 Validação da configuração
+config/              Agenda, identidade visual, prompts e fontes editoriais
+docs/                Perfil institucional, decisões e rotina
+logs/marketing/      Registros locais de geração e publicação
+scripts/             Composição, validação e publicação
+src/                 Pipeline tipado de marketing
 tests/               Testes de comportamento
 ```
 
@@ -43,6 +46,22 @@ npm run typecheck
 ```
 
 Preencha o `.env` somente com credenciais e endpoints reais autorizados. Nunca versione esse arquivo.
+
+## Pipeline de marketing
+
+O pipeline cria a composição visual sem logo e texto promocional, aplica os elementos oficiais por código, normaliza o arquivo para o formato do canal, valida a área segura e só depois tenta publicar. A imagem final é preservada quando a API do Instagram falha.
+
+Exemplos de execução local:
+
+```bash
+npm test
+npm run typecheck
+npm run marketing:slot -- --dry-run --channel=story --scheduled-at=2026-10-26T12:00:00.000Z --scene=/caminho/cena.png --slug=educacao-equipamento --headline="CUIDAR BEM" --body="Informação ajuda na rotina." --cta="Fale com a AquiNoSite"
+npm run marketing:validate -- --image=assets/marketing/arquivo.png --format=story
+npm run marketing:publish -- --asset=assets/marketing/arquivo.png --image-url=https://url-publica/arquivo.png --format=story
+```
+
+As execuções reais devem usar o `.env` local e uma URL pública autorizada para a mídia. Os arquivos em `logs/marketing/*.jsonl` são locais e não devem ser versionados.
 
 ## Convenções de criação
 

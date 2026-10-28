@@ -3,6 +3,8 @@
 !.env.example
 .DS_Store
 node_modules/
+.env
+logs/marketing/*.jsonl
 out/
 dist/
 coverage/

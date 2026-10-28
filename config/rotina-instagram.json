@@ -1,0 +1,12 @@
+{
+  "timezone": "America/Sao_Paulo",
+  "weekdays": ["monday", "tuesday", "wednesday", "thursday", "friday"],
+  "slots": [
+    { "channel": "story", "time": "09:00", "format": "9:16", "generateEvenWhenPublicationFails": true },
+    { "channel": "feed", "time": "15:00", "format": "1:1", "generateEvenWhenPublicationFails": true }
+  ],
+  "publication": {
+    "approvalRequired": false,
+    "destination": "instagram"
+  }
+}

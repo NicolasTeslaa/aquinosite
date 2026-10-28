@@ -36,6 +36,15 @@ description: Convenções para identidade, criação de imagens e publicação d
 - Critério de aceite da logo: compare a logo final com o arquivo oficial do cliente e confirme símbolo, proporções, grafia "AquiNoSite", acentuação de "Saúde", cores e espaçamentos. Qualquer diferença reprova a arte e exige correção antes de salvar ou publicar.
 - Se o gerador inserir uma logo parecida, texto ilegível ou símbolo diferente, remova essa versão e substitua pela logo oficial; nunca trate uma aproximação como aceitável.
 
+### Pipeline de imagens estáticas
+
+- Use `config/identidade-visual.json`, `config/referencias-visuais.json` e o arquivo correspondente em `config/prompts/` antes de gerar uma cena.
+- Gere a cena sem a logo do AquiNoSite, sem o nome da empresa, sem textos importantes e sem logos de terceiros.
+- Aplique a logo oficial e todos os textos importantes por meio de `src/compose-marketing-image.ts`; nunca peça ao modelo para compor a copy final.
+- Execute `src/validate-marketing-image.ts` antes da publicação. Falha de validação bloqueia a publicação.
+- Use `npm run marketing:slot` para executar um slot completo. O runner salva a arte válida antes de tentar publicar.
+- Se a publicação falhar, preserve a arte final e consulte `logs/marketing/records.jsonl`; não gere outra imagem apenas porque a API falhou.
+
 ## Legendas
 
 Toda publicação de Feed deve receber legenda automática em português brasileiro. A legenda deve explicar o tema da arte com clareza, evitar promessas não verificadas e terminar com uma chamada para ação coerente com as fontes do cliente. Stories podem usar o texto da própria arte quando isso for suficiente.

@@ -5,11 +5,17 @@
   "type": "module",
   "scripts": {
     "test": "tsx --test tests/*.test.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "marketing:slot": "tsx scripts/run-content-slot.ts",
+    "marketing:validate": "tsx scripts/validate-marketing-image.ts",
+    "marketing:publish": "tsx scripts/publish-instagram.ts"
   },
   "devDependencies": {
     "@types/node": "22.10.2",
     "tsx": "4.19.2",
     "typescript": "5.7.2"
+  },
+  "dependencies": {
+    "sharp": "^0.33.5"
   }
 }
