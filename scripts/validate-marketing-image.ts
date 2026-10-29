@@ -8,19 +8,17 @@ function arg(name: string): string | undefined {
 
 const imagePath = arg('image');
 const format = arg('format') as 'story' | 'feed' | undefined;
-const logoApplied = arg('logo-applied') !== 'false';
-const copyBounds = (arg('copy-bounds') ?? '100,300,880,1000').split(',').map(Number);
+const expectedCopy = [arg('headline'), arg('body'), arg('cta'), 'AquiNoSite Saúde'].filter((value): value is string => Boolean(value));
 const logPath = arg('log') ?? 'logs/marketing/records.jsonl';
 
-if (!imagePath || !format || copyBounds.length !== 4 || copyBounds.some(Number.isNaN)) {
-  throw new Error('required arguments: --image, --format, and optional --copy-bounds=x,y,width,height');
+if (!imagePath || !format || expectedCopy.length < 4) {
+  throw new Error('required arguments: --image, --format, --headline, --body, and --cta');
 }
 
 const result = await validateMarketingImage({
   imagePath,
   format,
-  logoApplied,
-  copyBounds: { x: copyBounds[0], y: copyBounds[1], width: copyBounds[2], height: copyBounds[3] },
+  expectedCopy,
   hashRecords: (await readMarketingRecords(logPath)).filter((record) => record.status === 'published')
 });
 

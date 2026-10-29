@@ -45,9 +45,8 @@ description: Convenções para identidade, criação de imagens e publicação d
 - Use `config/identidade-visual.json`, `config/referencias-visuais.json` e o arquivo correspondente em `config/prompts/` antes de gerar uma cena.
 - Escolha uma referência existente e registre seu caminho e papel no briefing ou no registro de geração: `product`, `education`, `assistance` ou `institutional`.
 - Se uma referência necessária não puder ser visualizada pelo gerador, pare e registre a limitação; não apresente uma aproximação como se fosse fiel.
-- Gere a cena sem a logo do AquiNoSite, sem o nome da empresa, sem textos importantes e sem logos de terceiros.
-- Aplique a logo oficial e todos os textos importantes por meio de `src/compose-marketing-image.ts`; nunca peça ao modelo para compor a copy final.
-- Execute `src/validate-marketing-image.ts` antes da publicação. Falha de validação bloqueia a publicação.
+- Gere a arte final completa no ImageGen, incluindo a logo oficial, o nome da empresa e todos os textos importantes. Não use compositor, overlay, recorte, redimensionamento ou qualquer edição posterior.
+- Execute `src/validate-marketing-image.ts` com OCR antes da publicação. Falha de grafia bloqueia a publicação e exige nova geração no ImageGen com a correção.
 - Use `npm run marketing:slot` para executar um slot completo. O runner salva a arte válida antes de tentar publicar.
 - Se a publicação falhar, preserve a arte final e consulte `logs/marketing/records.jsonl`; não gere outra imagem apenas porque a API falhou.
 

@@ -13,9 +13,8 @@ Não há aprovação individual. A arte é salva antes da publicação e continu
 
 1. Ler `docs/empresa.md`, `config/instagram.json`, `config/identidade-visual.json` e o mapa de referências.
 2. Selecionar o tema editorial e a referência adequada.
-3. Gerar somente a cena visual, sem logo e sem copy final.
-4. Aplicar a logo oficial, textos e CTA pelo compositor.
-5. Validar dimensões, safe area, nome, hash, produto e legenda.
+3. Gerar a arte final completa no ImageGen, incluindo logo, textos e CTA.
+4. Validar dimensões, nome, hash, produto, legenda e grafia por OCR; se houver erro, gerar novamente no ImageGen.
 6. Salvar a arte em `assets/marketing/`.
 7. Tentar publicar somente no Instagram.
 8. Registrar sucesso ou erro em `logs/marketing/records.jsonl`.

@@ -6,7 +6,7 @@ function arg(name: string): string | undefined {
 }
 
 const channel = arg('channel') as 'story' | 'feed' | undefined;
-const scenePath = arg('scene');
+const imagePath = arg('image');
 const scheduledAt = arg('scheduled-at');
 const slug = arg('slug');
 const headline = arg('headline');
@@ -18,14 +18,12 @@ const dryRun = process.argv.includes('--dry-run');
 const outputDir = arg('output-dir');
 const logPath = arg('log');
 
-if (!channel || !scenePath || !scheduledAt || !slug || !headline || !body) {
-  throw new Error('required arguments: --channel, --scene, --scheduled-at, --slug, --headline, --body');
-}
+if (!channel || !imagePath || !scheduledAt || !slug || !headline || !body) throw new Error('required arguments: --channel, --image, --scheduled-at, --slug, --headline, --body');
 
 const result = await runContentSlot({
   channel,
   scheduledAt: new Date(scheduledAt),
-  scenePath,
+  imagePath,
   outputDir,
   logPath,
   imageUrl,

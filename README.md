@@ -92,10 +92,12 @@ identidade visual da Teslinha, adaptado ao conteúdo da AquiNoSite Saúde:
    referências pertinentes de [`assets/referencias/`](assets/referencias/).
 3. Registre no briefing o caminho e o papel de cada referência: produto,
    educação, assistência ou institucional.
-4. Gere apenas a cena original, sem logo, nome da empresa ou copy final.
-5. Aplique logo, texto e CTA com o compositor determinístico do projeto e
-   execute [`src/validate-marketing-image.ts`](src/validate-marketing-image.ts)
-   antes de publicar.
+4. Gere a arte final completa no ImageGen, incluindo logo, texto e CTA. Não
+   use compositor, overlay, recorte, redimensionamento ou qualquer edição
+   posterior para alterar a arte.
+5. Execute [`src/validate-marketing-image.ts`](src/validate-marketing-image.ts)
+   com OCR antes de publicar. Se a grafia divergir do briefing, gere uma nova
+   arte no ImageGen com a correção; nunca corrija o arquivo por edição externa.
 
 Se uma referência necessária não estiver disponível ou não puder ser
 visualizada pelo gerador, o fluxo deve declarar a limitação e não substituir o
