@@ -8,8 +8,12 @@ description: Convenções para identidade, criação de imagens e publicação d
 ## Fontes e escopo
 
 - Leia `docs/empresa.md` antes de tomar decisões de conteúdo.
-- Use `assets/referencias/` como referência visual, nunca como conteúdo a copiar.
+- Toda imagem nova deve partir de pelo menos uma imagem existente em `assets/referencias/` ou no diretório de referências do kit (`prompt-kit-aquinosite/assets/referencias/`). A referência escolhida deve ser registrada no briefing ou no artefato de geração e sua composição, linguagem visual, enquadramento e tratamento de cor devem ser preservados com fidelidade; não é permitido gerar uma cena do zero sem uma dessas bases.
+- Use as referências como base visual; não copie textos, logos ou conteúdo de terceiros que não estejam autorizados.
 - Use somente logos fornecidos pelo cliente em `assets/logo/`.
+- Trate `config/identidade-visual.json` como a fonte de verdade para o caminho
+  atual da logo oficial; não recorra a nomes de arquivo antigos quando o
+  arquivo configurado não estiver disponível.
 - A logo é um critério de aceite obrigatório: toda arte que exibir a marca deve usar a logo oficial fornecida pelo cliente, sem redesenho, recriação, estilização, substituição ou variação gerada por IA.
 - Não peça ao gerador de imagens para desenhar a logo. Gere a composição com uma área reservada e aplique a logo oficial posteriormente, usando o arquivo de `assets/logo/` como sobreposição.
 - O site e o Instagram registrados em `config/instagram.json` são fontes editoriais.
@@ -39,6 +43,8 @@ description: Convenções para identidade, criação de imagens e publicação d
 ### Pipeline de imagens estáticas
 
 - Use `config/identidade-visual.json`, `config/referencias-visuais.json` e o arquivo correspondente em `config/prompts/` antes de gerar uma cena.
+- Escolha uma referência existente e registre seu caminho e papel no briefing ou no registro de geração: `product`, `education`, `assistance` ou `institutional`.
+- Se uma referência necessária não puder ser visualizada pelo gerador, pare e registre a limitação; não apresente uma aproximação como se fosse fiel.
 - Gere a cena sem a logo do AquiNoSite, sem o nome da empresa, sem textos importantes e sem logos de terceiros.
 - Aplique a logo oficial e todos os textos importantes por meio de `src/compose-marketing-image.ts`; nunca peça ao modelo para compor a copy final.
 - Execute `src/validate-marketing-image.ts` antes da publicação. Falha de validação bloqueia a publicação.

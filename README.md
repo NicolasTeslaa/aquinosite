@@ -1,72 +1,135 @@
-# AquiNoSite — conteúdo para Instagram
+# AquiNoSite Saúde
 
-Base isolada para criação e publicação automática de conteúdo do AquiNoSite no Instagram.
+## Sobre a empresa
 
-## Rotina aprovada
+A AquiNoSite Saúde atua com comércio e serviços relacionados a equipamentos para saúde. A empresa atende profissionais e responsáveis por clínicas, consultórios e operações de saúde que precisam escolher, comparar, utilizar, manter ou substituir equipamentos.
 
-- Segunda a sexta-feira: um Story às 09:00 e um Feed às 15:00.
-- Story em formato vertical `9:16`.
-- Feed em formato `1:1` por padrão.
-- Publicações do Feed recebem legenda automática.
-- As mídias são publicadas automaticamente, sem aprovação individual.
-- O cliente pode enviar a pauta semanal às segundas-feiras. Sem pauta, a criação é livre e deve usar o site, o Instagram e as referências visuais do cliente como base.
+Além de apresentar produtos, a comunicação da marca busca oferecer orientação para que cada pessoa encontre uma solução adequada à sua rotina profissional e à aplicação desejada.
 
-As regras versionadas ficam em [`config/instagram.json`](config/instagram.json). A rotina ainda depende de credenciais Meta/Instagram e de uma URL pública para cada mídia antes de publicar em produção.
+## Presença oficial
 
-## Estrutura
+- Site: [www.aquinosite.com.br](https://www.aquinosite.com.br/)
+- Instagram: [@aquinosite.saude](https://www.instagram.com/aquinosite.saude/)
 
-```text
-.agents/skills/      Regras operacionais do projeto
-assets/logo/         Logos fornecidos pelo cliente
-assets/referencias/  Identidade visual e referências aprovadas
-assets/marketing/    Artes finais de Feed e Story
-config/              Agenda, identidade visual, prompts e fontes editoriais
-docs/                Perfil institucional, decisões e rotina
-logs/marketing/      Registros locais de geração e publicação
-scripts/             Composição, validação e publicação
-src/                 Pipeline tipado de marketing
-tests/               Testes de comportamento
-```
+O site e o Instagram são as principais fontes públicas de informação sobre a empresa, seus produtos, categorias e temas editoriais.
 
-As 10 imagens iniciais para avaliação de estilo serão criadas posteriormente; esta base não contém artes geradas nesta etapa.
+## O que a AquiNoSite oferece
 
-Produtos mostrados em artes devem existir no catálogo oficial de [`config/catalogo-produtos.json`](config/catalogo-produtos.json). A página individual do produto no site é a referência visual obrigatória; não são permitidos produtos imaginários, genéricos ou de fontes externas.
+As categorias observadas no site incluem:
 
-### Logo — critério de aceite obrigatório
+- Equipamentos;
+- Acessórios;
+- Insumos;
+- Inaladores;
+- Ortopedia;
+- Equipamentos analíticos;
+- Produtos seminovos;
+- Locação;
+- Assistência técnica;
+- Produtos e equipamentos para uso veterinário.
 
-Toda imagem com a marca deve usar a logo oficial de `assets/logo/`. Nunca aceitar uma logo redesenhada ou gerada por IA. A composição deve ser gerada com espaço reservado e a logo oficial deve ser aplicada na etapa final; depois, conferir símbolo, proporções, grafia, acentuação, cores e espaçamentos antes de salvar ou publicar.
+A disponibilidade, o preço e a condição de cada item podem mudar. Essas informações devem ser confirmadas diretamente na página oficial do produto antes de uma decisão de compra ou publicação específica.
 
-## Configuração local
+## Produtos e temas identificados
 
-```bash
-cp .env.example .env
-npm install
-npm test
-npm run typecheck
-```
+Entre os produtos e assuntos encontrados nas fontes atuais estão:
 
-Preencha o `.env` somente com credenciais e endpoints reais autorizados. Nunca versione esse arquivo.
+- Espirômetros Vitalograph, incluindo Pneumotrac, Micro, Alpha Device Studio e In2itive;
+- Espirômetro Oscilômetro Tremoflo C 100;
+- In-Check Dial G16 Clement Clarke;
+- Termômetro Digital Clínico Axilar LCD TH1027 G-Tech;
+- Aparelho de Pressão Digital de Pulso P.A. MED;
+- Seringa de Calibração de 3 Litros AquiNoSite;
+- Eletroencefalógrafos EEG de 16 e 24 canais;
+- Dinamômetro Analógico Hidráulico de Mão SH5001;
+- Dinamômetro Digital de Mão DHD-1 SH1001;
+- Acessórios de espirometria;
+- Itens relacionados à fisioterapia respiratória.
 
-## Pipeline de marketing
+Quando um produto é apresentado, a referência deve ser o item real e a página correspondente no site oficial. Não devem ser usados produtos genéricos, equipamentos inventados ou imagens que representem outro modelo.
 
-O pipeline cria a composição visual sem logo e texto promocional, aplica os elementos oficiais por código, normaliza o arquivo para o formato do canal, valida a área segura e só depois tenta publicar. A imagem final é preservada quando a API do Instagram falha.
+## Posicionamento
 
-Exemplos de execução local:
+A AquiNoSite não deve ser percebida apenas como um catálogo. A marca combina produto, informação e relacionamento profissional para ajudar o público a tomar decisões mais conscientes.
 
-```bash
-npm test
-npm run typecheck
-npm run marketing:slot -- --dry-run --channel=story --scheduled-at=2026-10-26T12:00:00.000Z --scene=/caminho/cena.png --slug=educacao-equipamento --headline="CUIDAR BEM" --body="Informação ajuda na rotina." --cta="Fale com a AquiNoSite"
-npm run marketing:validate -- --image=assets/marketing/arquivo.png --format=story
-npm run marketing:publish -- --asset=assets/marketing/arquivo.png --image-url=https://url-publica/arquivo.png --format=story
-```
+O conteúdo deve aproximar tecnologia e rotina de saúde com clareza, precisão e confiança, sem inventar resultados, depoimentos, certificações, preços, prazos, garantias ou disponibilidade.
 
-As execuções reais devem usar o `.env` local e uma URL pública autorizada para a mídia. Os arquivos em `logs/marketing/*.jsonl` são locais e não devem ser versionados.
+## Conteúdo e comunicação
 
-## Convenções de criação
+Os temas prioritários são:
 
-Leia [`docs/empresa.md`](docs/empresa.md) e [`.agents/skills/aquinosite/SKILL.md`](.agents/skills/aquinosite/SKILL.md) antes de criar uma peça. Os arquivos finais devem ficar em `assets/marketing/` e seguir o formato de nome `YYYY-MM-DD_HH-mm-ss_descricao-curta_vNN.ext`, no fuso `America/Sao_Paulo`.
+- **Educação:** dúvidas, diferenças entre modelos, manutenção, aplicações e critérios de escolha;
+- **Contexto profissional:** equipamentos em clínicas, consultórios, fisioterapia e ambientes de assistência;
+- **Confiança:** bastidores, preparação, testes, suporte e relacionamento;
+- **Produtos contextualizados:** produtos reais apresentados em situações de uso;
+- **Institucional:** categorias, história, parcerias e diferenciais confirmados.
 
-## Escopo excluído
+O perfil deve vender conhecimento e confiança, e não somente mostrar produtos. Para cada produto divulgado, é recomendável também produzir conteúdos que respondam a uma dúvida, um problema ou uma situação de uso relacionada a ele.
 
-Este repositório não usa e-mail, SMTP, listas de contatos ou materiais da Teslinha Suporte.
+A linguagem deve ser objetiva e acessível, transformando assuntos técnicos em informações compreensíveis em poucos segundos. Pessoas e profissionais podem aparecer em situações plausíveis, mas o conteúdo não deve sugerir clientes reais, depoimentos ou resultados clínicos não confirmados.
+
+## Identidade visual
+
+A comunicação visual da AquiNoSite Saúde utiliza:
+
+- Azul, azul-marinho, ciano, branco e tons claros de apoio;
+- Títulos fortes e de leitura rápida;
+- Fotografia de produtos reais e situações profissionais plausíveis;
+- Composições limpas, com contraste e hierarquia clara;
+- Curvas e elementos azuis que conectam a informação à cena do produto;
+- Logo oficial da AquiNoSite Saúde aplicada sem redesenho, alteração ou substituição.
+
+As referências visuais podem orientar composição, ritmo e linguagem, mas não devem ser copiadas. A marca deve manter sua própria logo, suas cores e a representação correta dos produtos.
+
+## Fluxo de geração de imagens
+
+O pacote de geração segue o mesmo padrão operacional usado no projeto de
+identidade visual da Teslinha, adaptado ao conteúdo da AquiNoSite Saúde:
+
+1. Leia [`prompt.md`](prompt.md) como autoridade textual e abra
+   [`prompt-completo.html`](prompt-completo.html) como complemento visual.
+2. Envie a logo oficial de [`assets/logo/logo.png`](assets/logo/logo.png) e as
+   referências pertinentes de [`assets/referencias/`](assets/referencias/).
+3. Registre no briefing o caminho e o papel de cada referência: produto,
+   educação, assistência ou institucional.
+4. Gere apenas a cena original, sem logo, nome da empresa ou copy final.
+5. Aplique logo, texto e CTA com o compositor determinístico do projeto e
+   execute [`src/validate-marketing-image.ts`](src/validate-marketing-image.ts)
+   antes de publicar.
+
+Se uma referência necessária não estiver disponível ou não puder ser
+visualizada pelo gerador, o fluxo deve declarar a limitação e não substituir o
+produto por uma aproximação genérica. O catálogo e a página oficial continuam
+sendo obrigatórios para qualquer peça que mostre um produto específico.
+
+## Instagram
+
+A rotina editorial aprovada contempla duas peças por dia útil:
+
+| Canal | Horário padrão | Formato |
+| --- | ---: | --- |
+| Story | 09:00 | Vertical, proporção 9:16 |
+| Feed | 15:00 | Quadrado, proporção 1:1 |
+
+As publicações são planejadas para segunda a sexta-feira, no fuso de Brasília. O assunto da semana pode ser enviado na segunda-feira. Quando não houver uma pauta específica, a criação pode partir das informações públicas do site, do Instagram e das referências aprovadas.
+
+O Feed deve receber uma legenda em português brasileiro que explique o tema da arte e termine com uma chamada para ação coerente com as informações confirmadas da empresa. O Story pode usar a própria mensagem da arte quando ela for suficiente para orientar o público.
+
+## Compromisso editorial
+
+Toda comunicação da AquiNoSite deve:
+
+- Permanecer fiel às informações disponíveis nas fontes oficiais;
+- Diferenciar uma dúvida educativa de uma promessa comercial ou clínica;
+- Confirmar dados técnicos e regulatórios na página oficial do produto ou em fonte autorizada;
+- Mostrar o produto correto quando uma peça mencionar um modelo específico;
+- Usar a logo oficial, preservando símbolo, proporções, grafia, acentuação, cores e espaçamentos;
+- Priorizar orientação, precisão e confiança.
+
+## Fontes e data de referência
+
+As categorias, os produtos destacados e o escopo comercial descritos aqui foram consolidados a partir das fontes editoriais disponíveis em **26 de outubro de 2026**. A disponibilidade dos produtos e as condições comerciais devem ser confirmadas no site no momento da consulta.
+
+- [Site oficial da AquiNoSite Saúde](https://www.aquinosite.com.br/)
+- [Instagram oficial da AquiNoSite Saúde](https://www.instagram.com/aquinosite.saude/)
+- [Sitemap do site oficial](https://www.aquinosite.com.br/sitemap.xml)

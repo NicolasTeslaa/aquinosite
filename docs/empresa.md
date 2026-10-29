@@ -33,6 +33,10 @@ A logo correta é requisito de todas as imagens geradas, com ou sem produto. Tod
 
 O fluxo obrigatório é gerar a composição sem pedir que a inteligência artificial desenhe a marca, reservar uma área segura e aplicar a logo oficial como sobreposição na etapa final. Antes de salvar ou publicar, conferir símbolo, proporções, grafia `AquiNoSite`, acentuação de `Saúde`, cores e espaçamentos contra o arquivo-fonte. Qualquer divergência reprova a arte e exige correção.
 
+## Regra obrigatória de origem visual
+
+Toda imagem nova criada para o repositório deve partir de uma imagem existente em `assets/referencias/` ou em `prompt-kit-aquinosite/assets/referencias/`. A imagem de referência escolhida deve ser identificada no briefing ou no registro de geração e servir como base real para a composição. A arte final deve manter fidelidade à referência em linguagem visual, enquadramento, ritmo, tratamento de cor e hierarquia; não se deve gerar uma cena visual inteiramente nova e apenas aplicar as cores da marca. Essa regra não substitui as exigências específicas de produto e logo: produtos devem continuar usando fotos oficiais e a logo deve continuar sendo aplicada a partir de `assets/logo/`.
+
 ## Criação sem pauta
 
 Na ausência de assunto enviado pelo cliente, a equipe pode criar livremente a partir do site, do Instagram e da pasta `assets/referencias/`. A liberdade é editorial, mas não autoriza afirmações factuais sem fonte nem conteúdo de saúde que extrapole as informações verificadas.
@@ -66,5 +70,5 @@ O cliente aprovou a criação posterior de 10 imagens de referência para avalia
 ## Referências recebidas
 
 - Logos: `assets/logo/`.
-- Captura do Instagram enviada pelo cliente: `assets/referencias/aquinosite-instagram-referencia-2026-10-26.jpeg`.
+- A captura histórica do Instagram não está disponível no pacote atual; não deve ser tratada como referência anexável.
 - O padrão visual observado na captura alterna cards azuis com fotos de produtos e pessoas, títulos curtos em branco, textos de apoio e a logo no rodapé.

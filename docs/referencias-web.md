@@ -6,7 +6,7 @@
 ## Instagram
 
 - Perfil: [@aquinosite.saude](https://www.instagram.com/aquinosite.saude/)
-- Captura local recebida do cliente: `assets/referencias/aquinosite-instagram-referencia-2026-10-26.jpeg`
+- A captura histórica do Instagram não está disponível no pacote atual; as referências locais disponíveis ficam em `assets/referencias/`.
 - O perfil público apresenta a marca AquiNoSite Saúde, destaques de produtos, quem somos, espirometria, parcerias, clientes e dúvidas.
 - A grade combina fotos e vídeos de pessoas/equipamentos com cards informativos em azul intenso, títulos brancos e a logo no rodapé ou em selos.
 - Os destaques usam capas circulares predominantemente azuis, com ícones e a marca em branco/ciano.

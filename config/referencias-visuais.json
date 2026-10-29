@@ -1,4 +1,12 @@
 {
+  "generationPolicy": {
+    "required": true,
+    "referenceRoots": [
+      "assets/referencias/",
+      "prompt-kit-aquinosite/assets/referencias/"
+    ],
+    "rule": "Toda imagem nova deve partir de pelo menos uma referência existente. Registrar a referência escolhida e preservar com fidelidade sua linguagem visual, enquadramento, ritmo, tratamento de cor e hierarquia; não gerar cenas do zero sem uma base visual do projeto."
+  },
   "education": [
     "assets/referencias/image.png",
     "assets/referencias/image copy.png"
@@ -8,7 +16,6 @@
     "assets/referencias/produtos/dinamometro-digital-dhd-1-sh1001-oficial.jpg"
   ],
   "institutional": [
-    "assets/referencias/aquinosite-instagram-referencia-2026-10-26.jpeg"
   ],
   "assistance": [
     "assets/referencias/image copy 2.png"

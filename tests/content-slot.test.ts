@@ -53,3 +53,24 @@ test('rejects weekend slots without creating or publishing an asset', async () =
     publish: false
   }), /weekday/i);
 });
+
+test('passes product containment through the content slot', async () => {
+  const directory = await mkdtemp(join(tmpdir(), 'aquinosite-slot-product-'));
+  const scene = join(directory, 'wide-product.png');
+  await sharp({ create: { width: 800, height: 400, channels: 4, background: '#FF0000' } }).png().toFile(scene);
+
+  const result = await runContentSlot({
+    channel: 'feed',
+    scheduledAt: new Date('2026-10-26T18:00:00.000Z'),
+    scenePath: scene,
+    sceneFit: 'contain',
+    outputDir: directory,
+    logPath: join(directory, 'log.jsonl'),
+    brief: { slug: 'produto-inteiro', headline: 'PRODUTO EM DESTAQUE', body: 'Veja o equipamento completo.', cta: 'Conheça o equipamento' },
+    publish: false
+  });
+
+  const { data, info } = await sharp(result.assetPath).raw().toBuffer({ resolveWithObject: true });
+  const pixel = (100 * info.width + 900) * info.channels;
+  assert.deepEqual(Array.from(data.subarray(pixel, pixel + 3)), [255, 255, 255]);
+});
