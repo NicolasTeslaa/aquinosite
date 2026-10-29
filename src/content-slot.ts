@@ -21,6 +21,7 @@ export interface SlotInput {
   channel: MarketingFormat;
   scheduledAt: Date;
   scenePath: string;
+  sceneFit?: 'cover' | 'contain';
   outputDir?: string;
   logPath?: string;
   imageUrl?: string;
@@ -67,7 +68,14 @@ export async function runContentSlot(input: SlotInput): Promise<SlotResult> {
   await mkdir(outputDir, { recursive: true });
   const outputPath = await nextOutputPath(outputDir, input.scheduledAt, input.brief.slug);
   const logoPath = resolve(config.brand.logoPath);
-  const composed = await composeMarketingImage({ ...input.brief, scenePath: input.scenePath, outputPath, format: input.channel, logoPath });
+  const composed = await composeMarketingImage({
+    ...input.brief,
+    scenePath: input.scenePath,
+    sceneFit: input.sceneFit,
+    outputPath,
+    format: input.channel,
+    logoPath
+  });
   const records = await readMarketingRecords(logPath);
   const validation = await validateMarketingImage({ imagePath: outputPath, format: input.channel, logoApplied: composed.logoApplied, copyBounds: composed.copyBounds, hashRecords: records.filter((record) => record.status === 'published') });
   if (!validation.valid) throw new Error(`marketing image validation failed: ${validation.errors.join('; ')}`);

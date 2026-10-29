@@ -1,18 +1,24 @@
 {
   "brand": {
     "name": "AquiNoSite Saúde",
-    "logoPath": "assets/logo/aquinosite-logo-cliente-01.jpeg",
+    "logoPath": "assets/logo/logo.png",
     "palette": {
       "navy": "#123A8C",
+      "ink": "#071B3A",
       "blue": "#155BEF",
       "cyan": "#20C8F3",
+      "mist": "#EAF7FB",
       "white": "#FFFFFF",
-      "text": "#123A8C"
+      "text": "#071B3A",
+      "secondaryText": "#29415F"
     },
     "typography": {
-      "headline": "Arial-Bold",
-      "body": "Arial",
-      "headlineSize": 72,
+      "headline": "Avenir Next, Helvetica Neue, Arial, sans-serif",
+      "body": "Avenir Next, Helvetica Neue, Arial, sans-serif",
+      "headlineWeight": 900,
+      "bodyWeight": 600,
+      "feedHeadlineSize": 76,
+      "storyHeadlineSize": 92,
       "bodySize": 30
     }
   },
@@ -27,6 +33,8 @@
     }
   },
   "composition": {
+    "system": "precisao-que-cuida",
+    "signature": "pulso-de-cuidado",
     "maxHeadlineLines": 3,
     "maxVisualSubjects": 1,
     "maxCtas": 1
