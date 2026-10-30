@@ -12,6 +12,21 @@ test('builds a continuous Brazilian-Portuguese caption without literal newline e
   });
 
   assert.ok(caption.includes('equipamentos de saúde'));
-  assert.ok(caption.endsWith('Fale com a AquiNoSite.'));
+  assert.ok(caption.includes('Fale com a AquiNoSite.'));
+  assert.ok(caption.endsWith('contato@aquinosite.com.br.'));
   assert.equal(caption.includes('\\n'), false);
+});
+
+test('always appends the saved AquiNoSite contact block to Feed captions', () => {
+  const caption = buildFeedCaption({
+    problem: 'A avaliação da força da mão pede um instrumento adequado.',
+    benefit: 'O SH5001 apoia uma rotina de avaliação com leitura analógica.',
+    cta: 'Entre em contato conosco!',
+    keywords: ['dinamômetro analógico', 'equipamentos de saúde']
+  });
+
+  assert.match(caption, /Telefone: 11981758822/);
+  assert.match(caption, /Instagram: @aquinosite\.saude/);
+  assert.match(caption, /www\.aquinosite\.com\.br/);
+  assert.match(caption, /contato@aquinosite\.com\.br/);
 });
