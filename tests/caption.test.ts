@@ -25,7 +25,7 @@ test('always appends the saved AquiNoSite contact block to Feed captions', () =>
     keywords: ['dinamômetro analógico', 'equipamentos de saúde']
   });
 
-  assert.match(caption, /Telefone: 11981758822/);
+  assert.match(caption, /Telefone: 11981757722/);
   assert.match(caption, /Instagram: @aquinosite\.saude/);
   assert.match(caption, /www\.aquinosite\.com\.br/);
   assert.match(caption, /contato@aquinosite\.com\.br/);
